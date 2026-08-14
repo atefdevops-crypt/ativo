@@ -33,4 +33,13 @@
 //33- THEN run the all "SCRIPTS DEBUG " at the terminal which called ("D-B-S") , FRIRSTLY go to the terminal and wrote <"cd backend "> <"npm run build"> #it will create afolder called dist and contain two (2) files {index.d.ts} +{index.js}  ,  <"npm run start"> , <"npm run dev "> # it will gives U alink url like this <"  url: 'file:///C:/Users/dina/Music/pern_stack/backend/.src/index.ts'">
 //34- THEN go to the file of {index.ts} to create express app and remove all found on it then  wrote (<import express from "express";>) , (<const app = express();>) , (app.listen(3001, ()=> console.log("LISITENING ON PORT 3001 ")) ; )
 //35- THEN write on terminal (<npm run dev >) to ensure the server is respond to you and return ("APP LISTENING PORT 3001") 
-//36- 
+//36- ****************{  THEN CREATE  "DATABASE SHEMA & RELATIONS"  }***********************
+//37- THEN go to the fokder {DB} and create a gile called ("schema.ts")
+//38- THEN open " DRIZZLE ORM " and login/signup through this link (<https://orm.drizzle.team/>)
+//39- (*)THEN full the file {shcema.ts} with database codes # copy past or ai can generated it 
+//40- (*)THEN go to the folder of {"DB"} and create afile called {"index.ts"} and full it with codes U copy it 
+//41- (*)THEN go to the folder of backend and create afile called {drizzle.config.ts} and paste   #*"the ignore code"
+//42- THEN open file {package.json} and under debuging_script EXACTLY UNDER START ("D-B-S") U wrote (<"DB:push" : "drizzle-kit push">)
+//43- THEN open terminal and wrote (< cd backend >) , (< npm run DB:push >)
+//44- THEN open {neon} website and check for tables # U find it he created it 
+//45- 
