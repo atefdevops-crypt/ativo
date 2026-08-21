@@ -13,7 +13,7 @@
 //13- Then at folder of backend U will create two files ({.env} , {.env.example})
 //14- Then go to inside (env) and firstlly wrote {<PORT = 3001>} , {<NODE_ENV=development>} #for production , {<DATABASE_URL=test >}
 //15- Then open postgress and login/signup through this link (<https://neon.com/?ref=aapy7>)
-//16- Then click on connect and copy the link of postgres and paste it insisde env in the line of database_url instead of test WHICH IMPORTANT FOR RESTFUL # dont forget the quotation "" 
+//16- Then click on connect and copy the link of postgres and paste it insisde env in the line of database_url instead of test WHICH IMPORTANT FOR RESTFUL # dont forget the quotation .
 //17- SO it show LIKE_THIS<--DATABSE_URL="postgresql://neondb_owner:npg_4NOF7gBwaTjM@ep-lingering-bird-azrnetuv-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"-->
 //18- THEN open clerk and login/signup to it # for authorithication / authentication (<https://dashboard.clerk.com/sign-up?utm_source=as-a-programmer&utm_medium=youtube&utm_campaign=video-support&dub_id=qzeNDhopJl1zPsF8>)
 //19- Then open it and select express and copy the code of ({express}) of env and copy it and paste it inside file {.env}
@@ -34,7 +34,7 @@
 //34- THEN go to the file of {index.ts} to create express app and remove all found on it then  wrote (<import express from "express";>) , (<const app = express();>) , (app.listen(3001, ()=> console.log("LISITENING ON PORT 3001 ")) ; )
 //35- THEN write on terminal (<npm run dev >) to ensure the server is respond to you and return ("APP LISTENING PORT 3001") 
 //36- ****************{  THEN CREATE  "DATABASE SHEMA & RELATIONS"  }***********************
-//37- THEN go to the fokder {DB} and create a gile called ("schema.ts")
+//37- THEN go to the folder {DB} and create a gile called ("schema.ts")
 //38- THEN open " DRIZZLE ORM " and login/signup through this link (<https://orm.drizzle.team/>)
 //39- (*)THEN full the file {shcema.ts} with database codes # copy past or ai can generated it 
 //40- (*)THEN go to the folder of {"DB"} and create afile called {"index.ts"} and full it with codes U copy it 
@@ -42,4 +42,23 @@
 //42- THEN open file {package.json} and under debuging_script EXACTLY UNDER START ("D-B-S") U wrote (<"DB:push" : "drizzle-kit push">)
 //43- THEN open terminal and wrote (< cd backend >) , (< npm run DB:push >)
 //44- THEN open {neon} website and check for tables # U find it he created it 
-//45- 
+//45- ****************{  THEN GOING TO  " AUTH & WEBHOOKS "  }***********************
+//46- THEN going to terminal and wrote (<" cd frontend ">) , (<" npm run dev">) # it will gives U alink for your website like this (" http://localhost:5173/")
+//47- THEN going to (clerk as {"https://dashboard.clerk.com/apps/app_3Hqf5Irg3KkRBJufjOFBB3CjcGv/instances/ins_3Hqf5H2TymulKCyk0IQnP8yfLst"}) and choose "REACT" and choose manual setup then copy the second command "npm install @clerk/react" and paste it in the same perivous terminal after click " CTRL + C "
+//48- THEN COPY THE THIRD (3) COMMAND ON CLERK "VITE_CLERK_PUBLISHABLE_KEY=pk_test_bWF0dXJlLWNyb3ctNDEuY2xlcmsuYWNjb3VudHMuZGV2JA" WHICH IS YOUR API and create afile called {" .env "} under frontend and paste your key on it 
+//49- THEN copy the last line of cammoand number (4) which is (import { ClerkProvider } from '@clerk/react') and paste it in the folder of (src --> main.jsx) below import ; and below "strictmode" of same file U paste the clerk provide app from the same command (<ClerkProvider> <App /> </ClerkProvider>) # dont forget the lines 
+//50- THEN going to the (5) command on clerk an copy the all ("HEADER") AND OPEN FILE {APP.JSX} and delete every thing unfer {<>} and paste the header till {</>} ; and remove the all "import codes " except code of css # even line of const # and paste the line of import show from command (5) on clerk ;  and worte on terminal of frontend  (npm run dev ) 
+//51- THEN going to  ( neon >> configure >> developer >> webhook ) and create "ENDPOINT" and make "endpoint_url" like this (https://ativo.com)and next wrote "USER" at {subscribe to event} and click on create ; it will gives u a (Signing _Secret) and copy it ; then go to (backend folder ----> .env ) and wrote (" CLERK_WEBHOOK_SECRET=+LINK")
+//52- SO it show LIKE_THIS<--whsec_k/ERTqvpSxWFai3WK8bK3y5THckIIDCn--> 
+//53- THEN go to ( backend ----> src----> hooks ) and create afile called {clerk.ts }
+//54- THEN going to ( index.ts which Found in backend ) and wrote ("< app.use(express.json())>") ; ("< app.use(cors())>") ("< import cors from "cors" >") , then going to terminal and wrote (" cd backend ") , (" npm i --save-dev @types/cors ")
+//55- THEN at the same file of { index.ts } wrote this ("<--import { clerkMiddleware } from "@clerk/express";-->") , ("--< app.use(clerkMiddleware()); -->") and wrote this (--< app.post("/hooks/clerk" ,rawJson ,(req ,res) => {void clerkWebHookHandler(req , res)}); -->) # MUST BE ABOVE THE LINE COMMAND OF " (express.json()) ) " , then  create a variable called "rawJson" and paste this code inside it (const rawJson = express.raw({ type: "application/json" , "limit": "1mb" });) # which is for webhooks
+//56- THEN going to the folder of (backend ----> src----> hooks ) and open the file of {clerk.ts} and wrote (< export async function clerkWebHookHandler(req: Request, res: Response){}>) , and wrote (< import type { Request, Response } from "express"; >) 
+//57- THEN going to the folder of (backend ----> src----> lib ) and create afile called {env.ts} and paste the first paste inside file {lib_backend.gitignore} . 
+//58- THEN going to the folder of (backend ----> .env)) and wrote (<FRONTED_URL=http://localhost:5173>) , (<POLAR_ACCESS_TOKEN=testtoken>) , (<POLAR_WEBHOOK_SECRET=testsecret>) , (<POLAR_API_BASE=https://sandbox-api.polar.sh>) , (<POLAR_CHECKOUT_PRODUCT_ID=testid>) # which is for payment
+//59- THEN open the file of {backend.lib.env.ts.ignore \} and copy the " second paste " and paste it inside the file of {lib/env.ts} and save it .
+//60- THEN going to the file of {index.ts } and wrote (< const env = getEnv(); >) , (< import { getEnv } from "./lib/env"; >) ,(<import "dotenv/config";>), and edit the line of "app.listen" to (<app.listen(env.PORT, ()=> console.log("APP LISTENING PORT", env.PORT)) ;>) , and go to the file of {env.ts} and remove the ".uuid()" from the line of "POLAR_CHECKOUT_PRODUCT_ID" and save it .
+//61- THEN going to the terminal and wrote (< cd backend >) , (< npm run dev >)  # to ensure the server is respond to you and return ("APP LISTENING PORT 3001") .
+//62- THEN going to the file of {clerk.ts} and paste the code of "third paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//63 -THEN going to the folder of (backend ----> src----> lib) and create afile called {roles.ts} AND paste the code of "fourth paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//64- THEN collapse the first  if condition on file {clerk.ts} and paste under it to the end the code of "fifth paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
