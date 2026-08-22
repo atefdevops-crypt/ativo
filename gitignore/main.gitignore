@@ -66,7 +66,7 @@
         //66- THEN open "RENDER.COM " and login/signup through this link (<https://render.com/>) through gethup  . 
         //67- THEN on "PERN_STACK" create two files the first one called {" Dockerfile "} and paste inside it the " sixth_paste " , and the second one called {".dockerignore"} .
         //68- THEN going to the terminal and wrote (< cd frontend >) , (< npm run build >) # it will create afolder called dist and contain two (1)  file called  {index.html} and one (1) folder called  {assets} and  two (2) icons . 
-        //69- THEN open the file {Dockerfile} and paste the " seventh_paste " inside it and save it .
+//69- THEN open the file {Dockerfile} and paste the " seventh_paste " inside it and save it .
 //70- THEN open the file which caalled {backend/src/index.ts} and paste this two lines of codes (import fs from "node:fs";) , (import path from "node:path";) and above the line of "app.listen" paste the entire code of "eighth_paste" and save it .
 
 
