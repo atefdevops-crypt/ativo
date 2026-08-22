@@ -3,6 +3,7 @@ import express from "express" ;
 import cors from "cors" ;
 import fs from "node:fs";
 import path from "node:path";
+import keepAliveCron from "./lib/corn" ;
 
 import { clerkMiddleware } from "@clerk/express";
 import { clerkWebhookHandler } from "./hooks/clerk";
@@ -18,6 +19,9 @@ app.post("/hooks/clerk" ,rawJson ,(req ,res) => {
 app.use(express.json()) ;
 app.use(cors()) ;
 app.use(clerkMiddleware()) ;
+app.get("/health", (_req, res) => {
+  res.json({ ok: true });
+});
 
 
 const publicDir = path.join(process.cwd(), "public");
@@ -38,6 +42,10 @@ if (fs.existsSync(publicDir)) {
     res.sendFile(path.join(publicDir, "index.html"), (err) => next(err));
   });
 }
-app.listen(env.PORT, ()=> console.log("APP LISTENING PORT", env.PORT)) ;
-
+app.listen(env.PORT, () => {
+  console.log("Listening on port:", env.PORT);
+  if (env.NODE_ENV === "production") {
+    keepAliveCron.start();
+  }
+})
 
