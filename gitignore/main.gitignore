@@ -1,14 +1,14 @@
 // 1- Making two folder called { frontend / and backend }..........
-// 2- THEN At the folder of front end get to the terminal and wrot  {<cd frondend>}
+// 2- THEN At the folder of front end get to the terminal and wrote  {<cd frondend>}
 // 3- Then wrote inside folder frontend {<npm create vite@latest .> }
-// 4- Then choose (react ) and (javascript) # which [javascript for frontend] and [typescripted for backend] 
-// 5- Then It will give you alink at terminal called local host for your project 
+// 4- Then choose (react ) and (javascript) # which [javascript for frontend] and [typescripted for backend]
+// 5- Then It will give you alink at terminal called local host for your project
 // 6- Then kill terminal of frontend and go to the folder backend and wrote on new  terminal {< cd backend >}
 // 7- Then wrote {< npm init -y >} # to create the file of (package.json)
-// 8- Then wrote this line < npm i express@5.2.1 dotenv@16.4.7 cors@2.8.5 @clerk/express@2.1.0 @clerk/backend@3.2.8 @imagekit/nodejs@7.4.0 @sentry/node@10.48.0 @sentry/profiling-node@10.48.0 drizzle-orm@0.39.3 pg@8.13.1 standardwebhooks@1.0.0 stream-chat@8.57.6 zod@3.24.2 > To install all package which this app neeed it 
-// 9- Then after the previous command U write this command < npm i --save-dev @types/express@5.0.6 @types/node@22.10.10 @types/pg@8.11.10 drizzle-kit@0.30.4 tsx@4.19.2 typescript@5.7.3 > 
-//10- Then create folder at backend called {src} , which have all sorce code for your backend # the same name of folder already created in frontend 
-//11- Then creat afile inside backend called < tsconfig.json > # find the source code # or wrote this command on terminal< npx tsc --init > # or copy and past it from the folder of gitignore 
+// 8- Then wrote this line < npm i express@5.2.1 dotenv@16.4.7 cors@2.8.5 @clerk/express@2.1.0 @clerk/backend@3.2.8 @imagekit/nodejs@7.4.0 @sentry/node@10.48.0 @sentry/profiling-node@10.48.0 drizzle-orm@0.39.3 pg@8.13.1 standardwebhooks@1.0.0 stream-chat@8.57.6 zod@3.24.2 > To install all package which this app neeed it
+// 9- Then after the previous command U write this command < npm i --save-dev @types/express@5.0.6 @types/node@22.10.10 @types/pg@8.11.10 drizzle-kit@0.30.4 tsx@4.19.2 typescript@5.7.3 >
+//10- Then create folder at backend called {src} , which have all sorce code for your backend # the same name of folder already created in frontend
+//11- Then create afile inside backend called < tsconfig.json > # find the source code # or wrote this command on terminal< npx tsc --init > # or copy and past it from the folder of gitignore
 //12- Then inside folder { backend -> src } you create a SEX (6) folder and (1) file #controllers #DB #routes  #lib #webhooks #middelware and @index.ts (file)
 //13- Then at folder of backend U will create two files ({.env} , {.env.example})
 //14- Then go to inside (env) and firstlly wrote {<PORT = 3001>} , {<NODE_ENV=development>} #for production , {<DATABASE_URL=test >}
@@ -18,11 +18,11 @@
 //18- THEN open clerk and login/signup to it # for authorithication / authentication (<https://dashboard.clerk.com/sign-up?utm_source=as-a-programmer&utm_medium=youtube&utm_campaign=video-support&dub_id=qzeNDhopJl1zPsF8>)
 //19- Then open it and select express and copy the code of ({express}) of env and copy it and paste it inside file {.env}
 //20- THEN open clerksentry and login/signup to it  (<https://sentry.io/solutions/ecommerce/?utm_source=codesistency&utm_medium=paid-community&utm_campaign=mobile-fy27q2-ecommerce&utm_content=video-rn-ecom-chat-tryfree>)
-//21- THEN click on button ("issue")under profile and click on ("configration") and copy the {DSN} linke at javascript WHICH between the quotation only 
+//21- THEN click on button ("issue")under profile and click on ("configration") and copy the {DSN} linke at javascript WHICH between the quotation only
 //22- SO it show LIKE_THIS<--https://244ab93f522abe8467458122254f2010@o4511902005460992.ingest.us.sentry.io/4511902009524224--> # dont forget the quotation
-//23- THEN open file {.env } and wrote {<SENTRY_DSN=+LINK>} without any quotation 
+//23- THEN open file {.env } and wrote {<SENTRY_DSN=+LINK>} without any quotation
 //24- THEN open getstream and login/signup through this link (<https://getstream.io/?utm_source=youtube&utm_medium=devrel&utm_content=&utm_campaign=burakq2>)
-//25- THEN copy two things the ("API") and the ("SECRET") , and going to the file of {.env } and wrote (<STREAM_API_KEY =>) , (<STREAM_API_SECRET=>) AND the two copies ander each of them 
+//25- THEN copy two things the ("API") and the ("SECRET") , and going to the file of {.env } and wrote (<STREAM_API_KEY =>) , (<STREAM_API_SECRET=>) AND the two copies under each of them
 //26- SO it show LIKE_THIS (STREAM_API_KEY="4k8pqusfy3n3"), (STREAM_API_SECRET="x8e4kukwheqmj8uud5vw4jxbdevr5xmr3y9xww5ct4bw77nsvbpzk3tuwhxzym73") # dont forget the quotation
 //27- THEN open imagekit and login/signup through this link (<https://imagekit.io/registration/?utm_source=youtube.com&utm_medium=cpc&utm_campaign=YTInfluencers_26Q1&utm_term=asaprogrammer&utm_content=ecommerce_tool>)
 //28- THEN from the dashboard most below choose ("Developer Option ") to get the {public key and the private key and the url_endpoint at top page }
@@ -32,50 +32,63 @@
 //32- THEN go to the (---backend -> index.ts >) and worte ("const name : string = atef ;") #dont forget the semicolumn ";"
 //33- THEN run the all "SCRIPTS DEBUG " at the terminal which called ("D-B-S") , FRIRSTLY go to the terminal and wrote <"cd backend "> <"npm run build"> #it will create afolder called dist and contain two (2) files {index.d.ts} +{index.js}  ,  <"npm run start"> , <"npm run dev "> # it will gives U alink url like this <"  url: 'file:///C:/Users/dina/Music/pern_stack/backend/.src/index.ts'">
 //34- THEN go to the file of {index.ts} to create express app and remove all found on it then  wrote (<import express from "express";>) , (<const app = express();>) , (app.listen(3001, ()=> console.log("LISITENING ON PORT 3001 ")) ; )
-//35- THEN write on terminal (<npm run dev >) to ensure the server is respond to you and return ("APP LISTENING PORT 3001") 
-//36- ****************{  THEN CREATE  "DATABASE SHEMA & RELATIONS"  }***********************
+//35- THEN write on terminal (<npm run dev >) to ensure the server is respond to you and return ("APP LISTENING PORT 3001")
+//36- ***********************************  {  2- "DATABASE SHEMA & RELATIONS"  }  ****************************************************
 //37- THEN go to the folder {DB} and create a gile called ("schema.ts")
 //38- THEN open " DRIZZLE ORM " and login/signup through this link (<https://orm.drizzle.team/>)
-//39- (*)THEN full the file {shcema.ts} with database codes # copy past or ai can generated it 
-//40- (*)THEN go to the folder of {"DB"} and create afile called {"index.ts"} and full it with codes U copy it 
+//39- (*)THEN full the file {shcema.ts} with database codes # copy past or ai can generated it
+//40- (*)THEN go to the folder of {"DB"} and create afile called {"index.ts"} and full it with codes U copy it
 //41- (*)THEN go to the folder of backend and create afile called {drizzle.config.ts} and paste   #*"the ignore code"
 //42- THEN open file {package.json} and under debuging_script EXACTLY UNDER START ("D-B-S") U wrote (<"DB:push" : "drizzle-kit push">)
 //43- THEN open terminal and wrote (< cd backend >) , (< npm run DB:push >)
-//44- THEN open {neon} website and check for tables # U find it he created it 
-//45- ****************{  THEN GOING TO  " AUTH & WEBHOOKS "  }***********************
+//44- THEN open {neon} website and check for tables # U find it he created it
+//45- **************************************  {  3- " AUTH & WEBHOOKS "  }  ***********************************************
 //46- THEN going to terminal and wrote (<" cd frontend ">) , (<" npm run dev">) # it will gives U alink for your website like this (" http://localhost:5173/")
 //47- THEN going to (clerk as {"https://dashboard.clerk.com/apps/app_3Hqf5Irg3KkRBJufjOFBB3CjcGv/instances/ins_3Hqf5H2TymulKCyk0IQnP8yfLst"}) and choose "REACT" and choose manual setup then copy the second command "npm install @clerk/react" and paste it in the same perivous terminal after click " CTRL + C "
-//48- THEN COPY THE THIRD (3) COMMAND ON CLERK "VITE_CLERK_PUBLISHABLE_KEY=pk_test_bWF0dXJlLWNyb3ctNDEuY2xlcmsuYWNjb3VudHMuZGV2JA" WHICH IS YOUR API and create afile called {" .env "} under frontend and paste your key on it 
-//49- THEN copy the last line of cammoand number (4) which is (import { ClerkProvider } from '@clerk/react') and paste it in the folder of (src --> main.jsx) below import ; and below "strictmode" of same file U paste the clerk provide app from the same command (<ClerkProvider> <App /> </ClerkProvider>) # dont forget the lines 
-//50- THEN going to the (5) command on clerk an copy the all ("HEADER") AND OPEN FILE {APP.JSX} and delete every thing unfer {<>} and paste the header till {</>} ; and remove the all "import codes " except code of css # even line of const # and paste the line of import show from command (5) on clerk ;  and worte on terminal of frontend  (npm run dev ) 
+//48- THEN COPY THE THIRD (3) COMMAND ON CLERK "VITE_CLERK_PUBLISHABLE_KEY=pk_test_bWF0dXJlLWNyb3ctNDEuY2xlcmsuYWNjb3VudHMuZGV2JA" WHICH IS YOUR API and create afile called {" .env "} under frontend and paste your key on it
+//49- THEN copy the last line of cammoand number (4) which is (import { ClerkProvider } from '@clerk/react') and paste it in the folder of (src --> main.jsx) below import ; and below "strictmode" of same file U paste the clerk provide app from the same command (<ClerkProvider> <App /> </ClerkProvider>) # dont forget the lines
+//50- THEN going to the (5) command on clerk an copy the all ("HEADER") AND OPEN FILE {APP.JSX} and delete every thing unfer {<>} and paste the header till {</>} ; and remove the all "import codes " except code of css # even line of const # and paste the line of import show from command (5) on clerk ;  and worte on terminal of frontend  (npm run dev )
 //51- THEN going to  ( neon >> configure >> developer >> webhook ) and create "ENDPOINT" and make "endpoint_url" like this (https://ativo.com)and next wrote "USER" at {subscribe to event} and click on create ; it will gives u a (Signing _Secret) and copy it ; then go to (backend folder ----> .env ) and wrote (" CLERK_WEBHOOK_SECRET=+LINK")
-//52- SO it show LIKE_THIS<--whsec_k/ERTqvpSxWFai3WK8bK3y5THckIIDCn--> 
+//52- SO it show LIKE_THIS<--whsec_k/ERTqvpSxWFai3WK8bK3y5THckIIDCn-->
 //53- THEN go to ( backend ----> src----> hooks ) and create afile called {clerk.ts }
 //54- THEN going to ( index.ts which Found in backend ) and wrote ("< app.use(express.json())>") ; ("< app.use(cors())>") ("< import cors from "cors" >") , then going to terminal and wrote (" cd backend ") , (" npm i --save-dev @types/cors ")
 //55- THEN at the same file of { index.ts } wrote this ("<--import { clerkMiddleware } from "@clerk/express";-->") , ("--< app.use(clerkMiddleware()); -->") and wrote this (--< app.post("/hooks/clerk" ,rawJson ,(req ,res) => {void clerkWebHookHandler(req , res)}); -->) # MUST BE ABOVE THE LINE COMMAND OF " (express.json()) ) " , then  create a variable called "rawJson" and paste this code inside it (const rawJson = express.raw({ type: "application/json" , "limit": "1mb" });) # which is for webhooks
-//56- THEN going to the folder of (backend ----> src----> hooks ) and open the file of {clerk.ts} and wrote (< export async function clerkWebHookHandler(req: Request, res: Response){}>) , and wrote (< import type { Request, Response } from "express"; >) 
-//57- THEN going to the folder of (backend ----> src----> lib ) and create afile called {env.ts} and paste the first paste inside file {lib_backend.gitignore} . 
+//56- THEN going to the folder of (backend ----> src----> hooks ) and open the file of {clerk.ts} and wrote (< export async function clerkWebHookHandler(req: Request, res: Response){}>) , and wrote (< import type { Request, Response } from "express"; >)
+//57- THEN going to the folder of (backend ----> src----> lib ) and create afile called {env.ts} and paste the #"2nd"# inside file {lib_backend.gitignore} .
 //58- THEN going to the folder of (backend ----> .env)) and wrote (<FRONTED_URL=http://localhost:5173>) , (<POLAR_ACCESS_TOKEN=testtoken>) , (<POLAR_WEBHOOK_SECRET=testsecret>) , (<POLAR_API_BASE=https://sandbox-api.polar.sh>) , (<POLAR_CHECKOUT_PRODUCT_ID=testid>) # which is for payment
-//59- THEN open the file of {backend.lib.env.ts.ignore \} and copy the " second paste " and paste it inside the file of {lib/env.ts} and save it .
+//59- THEN open the file of {backend.lib.env.ts.ignore \} and copy the #"3rd"# and paste it inside the file of {lib/env.ts} and save it .
 //60- THEN going to the file of {index.ts } and wrote (< const env = getEnv(); >) , (< import { getEnv } from "./lib/env"; >) ,(<import "dotenv/config";>), and edit the line of "app.listen" to (<app.listen(env.PORT, ()=> console.log("APP LISTENING PORT", env.PORT)) ;>) , and go to the file of {env.ts} and remove the ".uuid()" from the line of "POLAR_CHECKOUT_PRODUCT_ID" and save it .
 //61- THEN going to the terminal and wrote (< cd backend >) , (< npm run dev >)  # to ensure the server is respond to you and return ("APP LISTENING PORT 3001") .
-//62- THEN going to the file of {clerk.ts} and paste the code of "third paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
-//63- THEN going to the folder of (backend ----> src----> lib) and create afile called {roles.ts} AND paste the code of "fourth paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
-//64- THEN collapse the first  if condition on file {clerk.ts} and paste under it to the end the code of "fifth paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
-//65- ******************************************* {" DEPLOYING OUR APP " } ************************************************ # by taking frontend and build it then take backend and build it then compine the both of them and deploy it on render.com and make sure to add the env variables on render.com
-//66- THEN open "RENDER.COM " and login/signup through this link (<https://render.com/>) through gethup  . or {https://containers.back4app.com/} #its the same idea 
-//67- THEN on "PERN_STACK" create two files the first one called {" Dockerfile "} and paste inside it the " sixth_paste " , and the second one called {".dockerignore"} .
-//68- THEN going to the terminal and wrote (< cd frontend >) , (< npm run build >) # it will create afolder called dist and contain two (1)  file called  {index.html} and one (1) folder called  {assets} and  two (2) icons . 
-//69- THEN open the file {Dockerfile} and paste the " seventh_paste " inside it and save it .
-//70- THEN open the file which caalled {backend/src/index.ts} and paste this two lines of codes (import fs from "node:fs";) , (import path from "node:path";) and above the line of "app.listen" paste the entire code of "eighth_paste" and save it .
-//71- THEN put the env variables on "render.com" or "back4app.com" which is the same as the file of {backend/.env} and deploy it . #which found on the ninth paste and save it .
+//62- THEN going to the file of {clerk.ts} and paste the code of #"4th"# which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//63- THEN going to the folder of (backend ----> src----> lib) and create afile called {roles.ts} AND paste the code of #"5th"# which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//64- THEN collapse the first  if condition on file {clerk.ts} and paste under it to the end the code of #"6th"# which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//65- ****************************************   {" 4- DEPLOYING OUR APP " }   ************************************************ # by taking frontend and build it then take backend and build it then compine the both of them and deploy it on render.com and make sure to add the env variables on render.com
+//66- THEN open "RENDER.COM " and login/signup through this link (<https://render.com/>) through gethup  . or {https://containers.back4app.com/} #its the same idea
+//67- THEN on "PERN_STACK" create two files the first one called {" Dockerfile "} and paste inside it the #"7th"# , and the second one called {".dockerignore"} .
+//68- THEN going to the terminal and wrote (< cd frontend >) , (< npm run build >) # it will create afolder called dist and contain two (1)  file called  {index.html} and one (1) folder called  {assets} and  two (2) icons .
+//69- THEN open the file {Dockerfile} and paste the #"8th"# inside it and save it .
+//70- THEN open the file which caalled {backend/src/index.ts} and paste this two lines of codes (import fs from "node:fs";) , (import path from "node:path";) and above the line of "app.listen" paste the entire code of #"9th"# and save it .
+//71- THEN put the env variables on "render.com" or "back4app.com" which is the same as the file of {backend/.env} and deploy it . #which found on the #"10th"# paste and save it .
 //72- IT will give u atemporary link such as ("https://ativo-s8jaaeap.b4a.run/") and it will change every hour , then u will take this link and added to the clerk endpoint url to be by this shape ("https://ativo-s8jaaeap.b4a.run/hooks/clerk") and save it .
 //73- THEN go to clerk website to users " chosse yourself account " and click on( metadata ---> public ) and make u a admine role by wrote this code ({"role": "admin"}) .
-//74- ******************************************* {" Understanding Cron jobs  " } ************************************************ --# which prevent your website from sleeping and make it alive all the time by making a cron job to your website link every " 14 minutes" . 
+//74- ****************************************   {" 5- Understanding Cron jobs  " }  ************************************************ --# which prevent your website from sleeping and make it alive all the time by making a cron job to your website link every " 14 minutes" .
 //~75- THEN go to the terminal and wrote (< cd backend >) , (< npm install cron@4.4.0 >) .
-//76- THEN going to the folder of (backend ----> src----> lib) and create afile called {cron.ts} AND paste the code of "tenth paste" which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
-//77- THEN open the fiel of {index.ts} and paste the code of "eleventh paste" which in file "(backend.lib.env.ts.gitignore)" inside it under app.use() and save it .
-//78- THEN go to the terminal and wrote (< cd backend >) , (< npm run dev >) # to ensure the server is respond to you and return ("APP LISTENING PORT 3001")  and it will make your website alive all the time .
-//79- THEN commit it 
-//80- 
-
+//76- THEN going to the folder of (backend ----> src----> lib) and create afile called {cron.ts} AND paste the code of #"11th"# which in file "(backend.lib.env.ts.gitignore)" inside it and save it .
+//77- THEN open the fiel of {index.ts} and paste the code of #"12th"# which in file "(backend.lib.env.ts.gitignore)" inside it under app.use() and save it .
+//78- THEN go to the terminal and wrote (< cd backend >) , (< npm run dev >) # to ensure the server is respond to you and return ("APP LISTENING PORT 3001")  and it will make your website alive all the time and commit all this changes to githup .
+//79- ****************************************   {" 6- Product & Stream Routes " }   ************************************************ # by taking frontend and build it then take backend and build it then compine the both of them and deploy it on render.com and make sure to add the env variables on render.com
+//80- THEN going to the file which called {"index.ts"} and wrote on it (< app.use("/api/me",meRouter)>) , (< app.use("/api/products",producrtRouter)>) .
+//81- THEN going to the folder of (backend ----> src----> routes) and create two files called {meRouter.ts} , {productRouter.ts} .
+//82- THEN create afile called {users.ts} at the folder of ("lib") and paste the code of #"13teen"#  which in file inside it and save it .                                                                                             
+//83- THEN paste the code of #"14teen"  on both file of folder (routes) {meRouter.ts} , {productRouter.ts}                                                                                                                                                                   
+//84- THEN update the file of {meRouter.ts} wuth the code of #"15teen"# by_replace_all_on_it . 
+//85- THEN create afile under folder of ("controllers") called {productController.ts}                                                                       
+//86- THEN update the file of {productRouter.ts} wuth the code of #"16teen"# by_replace_all_on_it .  
+//87- THEN paste the code of #"17teen"# at the file of {productController.ts} .  
+//88- THEN add this line to file of {productRouter.ts} (<import { getCategories, listProducts } from "../controllers/productController";>) .                                                                      
+//89- THEN UPDATE file of {productController.ts} BY ADD another export from the same folder paste number #"17teen"#                                                                         
+//90- THEN add this line to the file of {index.ts} ---> (< app.use("/api/stream", streamRouter); >) . #at_section_of_app .                                                                          
+//91- THEN create a file called {streamRouter.ts} inside the folder of ("routes") , and inside it caontain the paste number #"14tenn"# but contain (< router.post("/token", createStreamToken) >) which found on #"18teen"# . 
+//92- THEN go to the folder of "lib" and create a file called { stream.ts } and paste the code of #"19teen"# inside it and save it .
+//93- THEN open stream website and login/signup through this link (< https://beta.dashboard.getstream.io/organization/1542062/ >) it will give U a Secret and a API Key just copy it . 
+//94- THEN go to the file of {streamController.ts} and paste the code of #"20teen"# inside it and save it .
