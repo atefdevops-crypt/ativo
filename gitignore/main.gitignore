@@ -101,6 +101,10 @@
 //101- THEN click on products and create a product id and copy it and paste it inside the file of {backend/.env} at the line of POLAR_CHECKOUT_PRODUCT_ID=+LINK . # but select the price as 1.00 dollar .
 //102- THEN go to the folder of (controllres ) and creat afile called {"checkoutController.ts"} and paste its code from paste #with_number_21 
 //103- THEN go to the lib and create a file called {polar.ts} and paste its code from paste #with_number_22 then commit on get hup 
+//104- *************************************  {" 8- Polar Webhooks " }   *************************************************
+//105- THEN create a file called {polar.ts } inside the folder of ("hooks") and it found on paste number "23" . and commit it . 
+
+
 
 
 

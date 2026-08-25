@@ -17,6 +17,7 @@ import { clerkMiddleware } from "@clerk/express";
 import { clerkWebhookHandler } from "./hooks/clerk";
 import { getEnv } from "./lib/env" ;
 import checkoutRouter from "./routes/checkoutRouter.js";
+import { polarWebhookHandler } from "./hooks/polar";
 
 const env = getEnv() ;
 const app = express() ; 
@@ -29,6 +30,10 @@ const rawJson = express.raw({ type: "application/json" , "limit": "1mb" }) ;
 app.post("/hooks/clerk" ,rawJson ,(req ,res) => {
     void clerkWebhookHandler(req , res)});
 
+
+app.post("/webhooks/polar", rawJson, (req, res) => {
+  void polarWebhookHandler(req, res);
+});
 
 
 app.use(express.json()) ;
