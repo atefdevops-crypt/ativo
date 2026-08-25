@@ -6,6 +6,7 @@ import path from "node:path";
 import keepAliveCron from "./lib/corn" ;
 
 
+import * as Sentry from "@sentry/node";
 
 
 import productRouter from "./routes/productRouter";
@@ -13,11 +14,15 @@ import meRouter from "./routes/meRouter";
 import streamRouter from "./routes/streamRouter"; 
 
 
+
 import { clerkMiddleware } from "@clerk/express";
 import { clerkWebhookHandler } from "./hooks/clerk";
 import { getEnv } from "./lib/env" ;
 import checkoutRouter from "./routes/checkoutRouter.js";
 import { polarWebhookHandler } from "./hooks/polar";
+import { sentryClerkUserMiddleware } from "./middleware/sentryClerkUser";
+
+
 
 const env = getEnv() ;
 const app = express() ; 
@@ -49,7 +54,7 @@ app.use("/api/me", meRouter) ;
 app.use("/api/products", productRouter) ;
 app.use("/api/stream", streamRouter) ;
 app.use("/api/checkout", checkoutRouter);
-
+app.use(sentryClerkUserMiddleware);
 
 
 
@@ -71,10 +76,23 @@ if (fs.existsSync(publicDir)) {
 
     res.sendFile(path.join(publicDir, "index.html"), (err) => next(err));
   });
-
-
-
 }
+
+
+// sentry will be attached to the response object
+Sentry.setupExpressErrorHandler(app);
+
+app.use(
+  (_err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+    const sentryId = (res as express.Response & { sentry?: string }).sentry;
+
+    res.status(500).json({
+      error: "Internal server error",
+      ...(sentryId !== undefined && { sentryId }),
+    });
+  },
+);
+
 app.listen(env.PORT, () => {
   console.log("Listening on port:", env.PORT);
   if (env.NODE_ENV === "production") {
