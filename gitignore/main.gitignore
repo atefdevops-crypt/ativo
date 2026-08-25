@@ -111,6 +111,8 @@
 //111- *********************************************  { " 10- Admin Routes " }  ************************************************* 
 //112- then open index.ts and add the app_use of admin role with its import . 
 //113- and create two files under folders of ("routes" , "controllers") which called {adminRouter.ts}  {adminController.ts} . and under folder of lib create afile called { imageKit.ts } and paste its code . and commit the changes . 
-
+//114- *********************************************  { " 11-Order Routes " }  ************************************************* # last of backend 
+//115- THEN add app.use OF order_Router  on { index.ts } with its import //113- and create two files under folders of ("routes" , "controllers") which called {orderRouter.ts}  {orderController.ts}  and commit it . 
+//116- 
 
 
