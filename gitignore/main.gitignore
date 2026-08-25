@@ -103,12 +103,14 @@
 //103- THEN go to the lib and create a file called {polar.ts} and paste its code from paste #with_number_22 then commit on get hup 
 //104- *************************************  {" 8- Polar Webhooks " }   *************************************************
 //105- THEN create a file called {polar.ts } inside the folder of ("hooks") and it found on paste number "23" . and commit it . 
-//106- *************************************  {  "9- Server Side Integrating Sentry" }   *************************************************
+//106- *************************************  {  " 9- Server Side Integrating Sentry " }   *************************************************
 //107- THEN go to the folder of (src) and create afile called {instrument.ts}
 //108- then open {package.json} and add this line_command ("< --import ./src/instrument.ts >") at both start and dev after ( tsx watch  , node) .
 //109- then open {index.ts} and add import sentry ("  import * as Sentry from "@sentry/node";") and add the section of it 
-//110- THEN at folder of (" middleware ") create afile called {" sentryClerkUser.ts "} and add paste on it . and add its app_use on {index.ts} file   # app.use(sentryClerkUserMiddleware); with its import then commit it 
-
+//110- THEN at folder of (" middleware ") create afile called {" sentryClerkUser.ts "} and add paste on it . and add its app_use on {index.ts} file   # app.use(sentryClerkUserMiddleware); with its import then commit it #dont forget check out router file when u click on npm run dev 
+//111- *********************************************  { " 10- Admin Routes " }  ************************************************* 
+//112- then open index.ts and add the app_use of admin role with its import . 
+//113- and create two files under folders of ("routes" , "controllers") which called {adminRouter.ts}  {adminController.ts} . and under folder of lib create afile called { imageKit.ts } and paste its code . and commit the changes . 
 
 
 
