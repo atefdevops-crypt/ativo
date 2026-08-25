@@ -16,10 +16,15 @@ import streamRouter from "./routes/streamRouter";
 import { clerkMiddleware } from "@clerk/express";
 import { clerkWebhookHandler } from "./hooks/clerk";
 import { getEnv } from "./lib/env" ;
+import checkoutRouter from "./routes/checkoutRouter.js";
 
 const env = getEnv() ;
 const app = express() ; 
+
+
 const rawJson = express.raw({ type: "application/json" , "limit": "1mb" }) ;
+
+
 
 app.post("/hooks/clerk" ,rawJson ,(req ,res) => {
     void clerkWebhookHandler(req , res)});
@@ -38,6 +43,8 @@ app.get("/health", (_req, res) => {
 app.use("/api/me", meRouter) ;
 app.use("/api/products", productRouter) ;
 app.use("/api/stream", streamRouter) ;
+app.use("/api/checkout", checkoutRouter);
+
 
 
 

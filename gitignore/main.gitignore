@@ -92,3 +92,15 @@
 //92- THEN go to the folder of "lib" and create a file called { stream.ts } and paste the code of #"19teen"# inside it and save it .
 //93- THEN open stream website and login/signup through this link (< https://beta.dashboard.getstream.io/organization/1542062/ >) it will give U a Secret and a API Key just copy it . 
 //94- THEN go to the file of {streamController.ts} and paste the code of #"20teen"# inside it and save it .
+//95- *************************************  {" 7- Checkout Routes for Payments " }   *************************************************
+//96- THEN open file of {index.ts} and add this line (< app.use("/api/checkout", checkoutRouter); >) and its import on the same page (<import checkoutRouter from "./routes/checkoutRouter.js";>) #at_section_of_app .
+//97- THEN create a file called {checkoutRouter.ts} inside the folder of ("routes") , and inside it caontain the paste number #"21teen"# but contain (< router.post("/create-checkout-session", createCheckoutSession) >) which found on #"22teen"# .
+//98- THEN open polar website and login/signup through this link (< https://beta.dashboard.getstream.io/organization/1542062/ >) it will give U a Secret and a API Key just copy it . 
+//99- THEN go to setting of polar then developers then create a token and choose {chckout.write , products.write} and copy it and paste it inside the file of {backend/.env} at the line of POLAR_ACCESS_TOKEN=+LINK . 
+//100- THEN go to setting of polar then webhooks and added a endpoint , and added your website url +hooks+polar like this (https://ativo.waifly.com/hooks/polar) and copy the signing secret and paste it inside the file of {backend/.env} at the line of POLAR_WEBHOOK_SECRET=+LINK . and choose order_paid  and copy the api of webhook and paste it on .env at  " POLAR_WEBHOOK_SECRET "
+//101- THEN click on products and create a product id and copy it and paste it inside the file of {backend/.env} at the line of POLAR_CHECKOUT_PRODUCT_ID=+LINK . # but select the price as 1.00 dollar .
+//102- THEN go to the folder of (controllres ) and creat afile called {"checkoutController.ts"} and paste its code from paste #with_number_21 
+//103- THEN go to the lib and create a file called {polar.ts} and paste its code from paste #with_number_22 then commit on get hup 
+
+
+
