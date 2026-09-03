@@ -13,6 +13,7 @@ export async function createStreamToken(req: Request, res: Response, next: NextF
       res.status(401).json({ error: "Unauthorized" });
       return;
     }
+
     const localUser = await getLocalUser(userId);
     if (!localUser) {
       res.status(503).json({ error: "Account not synced yet" });
@@ -37,11 +38,9 @@ export async function createStreamToken(req: Request, res: Response, next: NextF
     await server.upsertUser({ id: sid, name, image });
 
     const token = server.createToken(sid);
-    
-    res.json({ token, apikey: env.STREAM_API_KEY, userId: sid });
 
- 
-  } catch (error) {}
+    res.json({ token, apiKey: env.STREAM_API_KEY, userId: sid, name });
+  } catch (e) {
+    next(e);
+  }
 }
-
-
