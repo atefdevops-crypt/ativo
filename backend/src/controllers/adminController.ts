@@ -4,7 +4,7 @@ import { getLocalUser } from "../lib/users";
 import { isAdmin } from "../lib/roles";
 import ImageKit from "@imagekit/nodejs";
 import { getEnv } from "../lib/env";
-import { DB} from "../DB";
+import { DB } from "../DB";
 import { orderItems, products } from "../DB/schema";
 import { count, desc, eq } from "drizzle-orm";
 import { z } from "zod";
